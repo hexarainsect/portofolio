@@ -9,19 +9,16 @@
 <meta name="author" content="angkasa.dev">
 <meta name="robots" content="index, follow">
 
-<!-- Open Graph -->
 <meta property="og:title" content="angkasa.dev | Full Stack Developer & Digital Creator">
 <meta property="og:description" content="Portofolio profesional angkasa.dev - Full Stack Developer, Bot Developer, dan API Specialist.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://angkasa.dev">
 <meta property="og:image" content="https://angkasa.dev/og-image.png">
 
-<!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="angkasa.dev | Full Stack Developer">
 <meta name="twitter:description" content="Portofolio profesional angkasa.dev - Full Stack Developer & Digital Creator.">
 
-<!-- Structured Data -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -30,13 +27,12 @@
   "url": "https://angkasa.dev",
   "jobTitle": "Full Stack Developer",
   "sameAs": [
-    "https://github.com/angkasadev",
-    "https://instagram.com/angkasadev"
+    "https://github.com/hexarainsect",
+    "https://instagram.com/angkasanyabobo"
   ]
 }
 </script>
 
-<!-- Icons -->
 <link rel="preconnect" href="https://cdnjs.cloudflare.com">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
@@ -76,86 +72,60 @@ h1,h2,h3,h4{font-weight:700;letter-spacing:-0.02em;}
   position:fixed;inset:0;
   background:var(--black);
   z-index:9999;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
   transition:opacity .8s ease, visibility .8s ease;
   overflow:hidden;
 }
 #loading-screen.hide{opacity:0;visibility:hidden;}
-.particles-canvas{
-  position:absolute;inset:0;width:100%;height:100%;
-}
+.particles-canvas{position:absolute;inset:0;width:100%;height:100%;}
 .loader-logo{
-  font-size:clamp(2.5rem,8vw,5rem);
-  font-weight:800;
-  letter-spacing:0.05em;
+  font-size:clamp(2.5rem,8vw,5rem);font-weight:800;letter-spacing:0.05em;
   color:var(--white);
-  text-shadow:0 0 10px rgba(255,255,255,.6), 0 0 30px rgba(255,255,255,.4), 0 0 60px rgba(255,255,255,.2);
-  opacity:0;
-  animation: logoReveal 1.8s ease forwards;
-  position:relative;z-index:2;
+  text-shadow:0 0 10px rgba(255,255,255,.6),0 0 30px rgba(255,255,255,.4),0 0 60px rgba(255,255,255,.2);
+  opacity:0;animation:logoReveal 1.8s ease forwards;position:relative;z-index:2;
 }
 .loader-logo span{color:var(--gray);}
 @keyframes logoReveal{
-  0%{opacity:0; letter-spacing:0.4em; filter:blur(10px); transform:scale(.8);}
-  60%{opacity:1; filter:blur(0); transform:scale(1.02);}
-  100%{opacity:1; letter-spacing:0.05em; filter:blur(0); transform:scale(1);}
+  0%{opacity:0;letter-spacing:0.4em;filter:blur(10px);transform:scale(.8);}
+  60%{opacity:1;filter:blur(0);transform:scale(1.02);}
+  100%{opacity:1;letter-spacing:0.05em;filter:blur(0);transform:scale(1);}
 }
 .loader-bar-wrap{
-  margin-top:40px;width:240px;height:2px;
-  background:rgba(255,255,255,.1);
-  border-radius:10px;overflow:hidden;
-  position:relative;z-index:2;
+  margin-top:40px;width:240px;height:2px;background:rgba(255,255,255,.1);
+  border-radius:10px;overflow:hidden;position:relative;z-index:2;
 }
 .loader-bar{
-  height:100%;width:0%;
-  background:linear-gradient(90deg,#444,#fff,#444);
-  border-radius:10px;
-  animation: loadBar 2.2s ease forwards;
-  box-shadow:0 0 10px rgba(255,255,255,.6);
+  height:100%;width:0%;background:linear-gradient(90deg,#444,#fff,#444);
+  border-radius:10px;animation:loadBar 2.2s ease forwards;box-shadow:0 0 10px rgba(255,255,255,.6);
 }
-@keyframes loadBar{
-  0%{width:0%;}
-  100%{width:100%;}
-}
+@keyframes loadBar{0%{width:0%;}100%{width:100%;}}
 .loader-text{
   margin-top:18px;font-size:.75rem;letter-spacing:.3em;
   color:var(--gray);text-transform:uppercase;
-  opacity:0;animation: fadeInText 1s ease 1s forwards;
-  position:relative;z-index:2;
+  opacity:0;animation:fadeInText 1s ease 1s forwards;position:relative;z-index:2;
 }
 @keyframes fadeInText{to{opacity:1;}}
 
 /* ============ CURSOR ============ */
-.cursor-dot, .cursor-ring{
+.cursor-dot,.cursor-ring{
   position:fixed;top:0;left:0;pointer-events:none;border-radius:50%;
-  z-index:9998;transform:translate(-50%,-50%);
-  transition:opacity .3s ease;
+  z-index:9998;transform:translate(-50%,-50%);transition:opacity .3s ease;
 }
 .cursor-dot{width:6px;height:6px;background:#fff;}
-.cursor-ring{width:32px;height:32px;border:1px solid rgba(255,255,255,.3);transition:transform .15s ease, opacity .3s ease;}
+.cursor-ring{width:32px;height:32px;border:1px solid rgba(255,255,255,.3);transition:transform .15s ease,opacity .3s ease;}
 @media(max-width:1024px){.cursor-dot,.cursor-ring{display:none;}}
 
 /* ============ NAVBAR ============ */
 .navbar{
-  position:fixed;top:0;left:0;width:100%;
-  z-index:1000;
-  padding:18px 6%;
-  display:flex;align-items:center;justify-content:space-between;
-  background:rgba(10,10,10,.6);
-  backdrop-filter:blur(16px) saturate(150%);
-  border-bottom:1px solid var(--glass-border);
-  transition:var(--transition);
+  position:fixed;top:0;left:0;width:100%;z-index:1000;
+  padding:18px 6%;display:flex;align-items:center;justify-content:space-between;
+  background:rgba(10,10,10,.6);backdrop-filter:blur(16px) saturate(150%);
+  border-bottom:1px solid var(--glass-border);transition:var(--transition);
 }
 .logo{font-size:1.3rem;font-weight:800;letter-spacing:-.02em;}
 .logo span{color:var(--gray);}
 .nav-links{display:flex;gap:36px;align-items:center;}
-.nav-links a{
-  font-size:.9rem;color:var(--gray);position:relative;
-  transition:var(--transition);
-}
+.nav-links a{font-size:.9rem;color:var(--gray);position:relative;transition:var(--transition);}
 .nav-links a::after{
   content:'';position:absolute;left:0;bottom:-6px;width:0;height:1px;
   background:var(--white);transition:width .3s ease;
@@ -163,19 +133,12 @@ h1,h2,h3,h4{font-weight:700;letter-spacing:-0.02em;}
 .nav-links a:hover{color:var(--white);}
 .nav-links a:hover::after{width:100%;}
 .nav-cta{
-  padding:10px 22px;border:1px solid var(--glass-border);
-  border-radius:30px;font-size:.85rem;font-weight:600;
-  background:var(--glass);backdrop-filter:blur(10px);
-  transition:var(--transition);
+  padding:10px 22px;border:1px solid var(--glass-border);border-radius:30px;
+  font-size:.85rem;font-weight:600;background:var(--glass);backdrop-filter:blur(10px);transition:var(--transition);
 }
 .nav-cta:hover{background:var(--white);color:var(--black);box-shadow:0 0 20px rgba(255,255,255,.4);}
-.hamburger{
-  display:none;flex-direction:column;gap:5px;cursor:pointer;
-  z-index:1100;
-}
-.hamburger span{
-  width:26px;height:2px;background:var(--white);transition:var(--transition);
-}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;z-index:1100;}
+.hamburger span{width:26px;height:2px;background:var(--white);transition:var(--transition);}
 .hamburger.active span:nth-child(1){transform:translateY(7px) rotate(45deg);}
 .hamburger.active span:nth-child(2){opacity:0;}
 .hamburger.active span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
@@ -185,8 +148,7 @@ h1,h2,h3,h4{font-weight:700;letter-spacing:-0.02em;}
     position:fixed;top:0;right:-100%;height:100vh;width:75%;max-width:320px;
     background:rgba(10,10,10,.92);backdrop-filter:blur(20px);
     flex-direction:column;justify-content:center;gap:32px;
-    transition:right .5s cubic-bezier(.4,0,.2,1);
-    border-left:1px solid var(--glass-border);
+    transition:right .5s cubic-bezier(.4,0,.2,1);border-left:1px solid var(--glass-border);
   }
   .nav-links.active{right:0;}
   .nav-cta{display:none;}
@@ -196,49 +158,33 @@ h1,h2,h3,h4{font-weight:700;letter-spacing:-0.02em;}
 /* ============ HERO ============ */
 .hero{
   min-height:100vh;display:flex;align-items:center;justify-content:center;
-  text-align:center;position:relative;padding-top:100px;
-  overflow:hidden;
+  text-align:center;position:relative;padding-top:100px;overflow:hidden;
 }
-.hero-bg{
-  position:absolute;inset:0;z-index:0;
-}
+.hero-bg{position:absolute;inset:0;z-index:0;}
 .hero-bg canvas{width:100%;height:100%;display:block;}
 .hero-bg::after{
   content:'';position:absolute;inset:0;
-  background:radial-gradient(ellipse at center, transparent 0%, var(--black) 80%);
+  background:radial-gradient(ellipse at center,transparent 0%,var(--black) 80%);
 }
 .hero-content{position:relative;z-index:2;max-width:900px;}
 .hero-avatar{
-  width:120px;height:120px;border-radius:50%;
-  margin:0 auto 28px;
+  width:120px;height:120px;border-radius:50%;margin:0 auto 28px;
   background:linear-gradient(135deg,var(--dark),#2a2a2a);
   border:1px solid var(--glass-border);
   display:flex;align-items:center;justify-content:center;
   font-size:2.5rem;color:var(--gray);
   box-shadow:0 0 40px rgba(255,255,255,.08);
-  animation: float 5s ease-in-out infinite;
+  animation:float 5s ease-in-out infinite;
 }
-@keyframes float{
-  0%,100%{transform:translateY(0);}
-  50%{transform:translateY(-12px);}
-}
+@keyframes float{0%,100%{transform:translateY(0);}50%{transform:translateY(-12px);}}
 .hero h1{
-  font-size:clamp(2.8rem,9vw,6.5rem);
-  line-height:1;
+  font-size:clamp(2.8rem,9vw,6.5rem);line-height:1;
   background:linear-gradient(135deg,#fff 30%,#999 100%);
   -webkit-background-clip:text;background-clip:text;color:transparent;
 }
-.hero .subtitle{
-  margin-top:18px;font-size:clamp(1rem,2.5vw,1.4rem);
-  color:var(--gray);font-weight:500;letter-spacing:.02em;
-}
-.hero p.desc{
-  margin:24px auto 0;max-width:560px;color:var(--gray);
-  font-size:.95rem;
-}
-.hero-btns{
-  margin-top:40px;display:flex;gap:18px;justify-content:center;flex-wrap:wrap;
-}
+.hero .subtitle{margin-top:18px;font-size:clamp(1rem,2.5vw,1.4rem);color:var(--gray);font-weight:500;letter-spacing:.02em;}
+.hero p.desc{margin:24px auto 0;max-width:560px;color:var(--gray);font-size:.95rem;}
+.hero-btns{margin-top:40px;display:flex;gap:18px;justify-content:center;flex-wrap:wrap;}
 .btn{
   padding:14px 32px;border-radius:30px;font-size:.9rem;font-weight:600;
   transition:var(--transition);cursor:pointer;border:1px solid var(--glass-border);
@@ -248,11 +194,9 @@ h1,h2,h3,h4{font-weight:700;letter-spacing:-0.02em;}
 .btn-primary:hover{box-shadow:0 0 30px rgba(255,255,255,.5);transform:translateY(-3px);}
 .btn-outline{background:var(--glass);backdrop-filter:blur(10px);color:var(--white);}
 .btn-outline:hover{background:var(--glass-border);transform:translateY(-3px);}
-
 .scroll-indicator{
   position:absolute;bottom:30px;left:50%;transform:translateX(-50%);
-  color:var(--gray);font-size:1.4rem;
-  animation: bounce 2s infinite;z-index:2;
+  color:var(--gray);font-size:1.4rem;animation:bounce 2s infinite;z-index:2;
 }
 @keyframes bounce{
   0%,100%{transform:translateX(-50%) translateY(0);}
@@ -260,67 +204,51 @@ h1,h2,h3,h4{font-weight:700;letter-spacing:-0.02em;}
 }
 
 /* ============ SECTION TITLES ============ */
-.section-title{
-  text-align:center;margin-bottom:60px;
-}
+.section-title{text-align:center;margin-bottom:60px;}
 .section-title .tag{
   display:inline-block;padding:6px 18px;border-radius:30px;
   border:1px solid var(--glass-border);background:var(--glass);
   font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;
   color:var(--gray);margin-bottom:18px;
 }
-.section-title h2{
-  font-size:clamp(2rem,5vw,3rem);
-}
+.section-title h2{font-size:clamp(2rem,5vw,3rem);}
 .section-title p{color:var(--gray);margin-top:12px;max-width:520px;margin-inline:auto;font-size:.95rem;}
 
 /* ============ GLASS CARD BASE ============ */
 .glass-card{
-  background:var(--glass);
-  border:1px solid var(--glass-border);
-  border-radius:18px;
-  backdrop-filter:blur(14px);
-  transition:var(--transition);
+  background:var(--glass);border:1px solid var(--glass-border);
+  border-radius:18px;backdrop-filter:blur(14px);transition:var(--transition);
 }
 .glass-card:hover{
   border-color:rgba(255,255,255,.2);
-  box-shadow:0 8px 40px rgba(0,0,0,.5), 0 0 25px rgba(255,255,255,.05);
+  box-shadow:0 8px 40px rgba(0,0,0,.5),0 0 25px rgba(255,255,255,.05);
   transform:translateY(-6px);
 }
 
 /* ============ ABOUT ============ */
-.about-grid{
-  display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:center;
-}
+.about-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:center;}
 .about-card{padding:40px;}
 .about-card p{color:var(--gray);font-size:.95rem;margin-bottom:16px;}
-.about-stats{
-  display:grid;grid-template-columns:repeat(2,1fr);gap:20px;
-}
-.stat-box{
-  padding:28px 20px;text-align:center;
-}
+.about-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;}
+.stat-box{padding:28px 20px;text-align:center;cursor:default;}
 .stat-box h3{
-  font-size:2.3rem;
-  background:linear-gradient(135deg,#fff,#888);
+  font-size:2.3rem;background:linear-gradient(135deg,#fff,#888);
   -webkit-background-clip:text;background-clip:text;color:transparent;
 }
 .stat-box p{color:var(--gray);font-size:.8rem;margin-top:6px;letter-spacing:.05em;text-transform:uppercase;}
+/* clickable projects stat */
+.stat-box.clickable{cursor:pointer;}
+.stat-box.clickable:hover h3{filter:drop-shadow(0 0 10px rgba(255,255,255,.6));}
 @media(max-width:900px){.about-grid{grid-template-columns:1fr;}}
 
 /* ============ SKILLS ============ */
-.skills-tabs{
-  display:flex;justify-content:center;gap:12px;margin-bottom:48px;flex-wrap:wrap;
-}
+.skills-tabs{display:flex;justify-content:center;gap:12px;margin-bottom:48px;flex-wrap:wrap;}
 .skill-tab{
   padding:10px 24px;border-radius:30px;font-size:.85rem;font-weight:600;
   border:1px solid var(--glass-border);background:var(--glass);cursor:pointer;
   color:var(--gray);transition:var(--transition);
 }
 .skill-tab.active{background:var(--white);color:var(--black);}
-.skills-grid{
-  display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px;
-}
 .skill-category{display:none;}
 .skill-category.active{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px;}
 .skill-card{padding:24px;}
@@ -335,20 +263,17 @@ h1,h2,h3,h4{font-weight:700;letter-spacing:-0.02em;}
 }
 
 /* ============ PROJECTS ============ */
-.projects-grid{
-  display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:28px;
-}
+.projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:28px;}
 .project-card{overflow:hidden;}
 .project-thumb{
   height:180px;background:linear-gradient(135deg,#1f1f1f,#0c0c0c);
   display:flex;align-items:center;justify-content:center;
   font-size:2.5rem;color:var(--gray);
-  border-bottom:1px solid var(--glass-border);
-  position:relative;overflow:hidden;
+  border-bottom:1px solid var(--glass-border);position:relative;overflow:hidden;
 }
 .project-thumb::before{
   content:'';position:absolute;inset:0;
-  background:radial-gradient(circle at 30% 30%, rgba(255,255,255,.08), transparent 60%);
+  background:radial-gradient(circle at 30% 30%,rgba(255,255,255,.08),transparent 60%);
 }
 .project-body{padding:24px;}
 .project-body h4{font-size:1.15rem;margin-bottom:10px;}
@@ -361,34 +286,33 @@ h1,h2,h3,h4{font-weight:700;letter-spacing:-0.02em;}
 .project-links{display:flex;gap:12px;}
 .project-links a{
   flex:1;text-align:center;padding:10px;border-radius:10px;font-size:.82rem;font-weight:600;
-  border:1px solid var(--glass-border);transition:var(--transition);
+  border:1px solid var(--glass-border);transition:var(--transition);cursor:pointer;
 }
-.project-links a:first-child{background:var(--white);color:var(--black);}
-.project-links a:first-child:hover{box-shadow:0 0 20px rgba(255,255,255,.4);}
-.project-links a:last-child:hover{background:var(--glass-border);}
+.project-links a.btn-open{background:var(--white);color:var(--black);}
+.project-links a.btn-open:hover{box-shadow:0 0 20px rgba(255,255,255,.4);}
+.project-links a.btn-wip{color:var(--gray);}
+.project-links a.btn-wip:hover{background:var(--glass-border);}
 
 /* ============ TIMELINE ============ */
 .timeline{position:relative;max-width:760px;margin:0 auto;}
 .timeline::before{
   content:'';position:absolute;left:20px;top:0;bottom:0;width:1px;
-  background:linear-gradient(to bottom, transparent, rgba(255,255,255,.2), transparent);
+  background:linear-gradient(to bottom,transparent,rgba(255,255,255,.2),transparent);
 }
 .timeline-item{position:relative;padding-left:60px;margin-bottom:48px;}
 .timeline-item::before{
   content:'';position:absolute;left:14px;top:6px;width:13px;height:13px;border-radius:50%;
-  background:var(--black);border:2px solid var(--white);
-  box-shadow:0 0 12px rgba(255,255,255,.5);
+  background:var(--black);border:2px solid var(--white);box-shadow:0 0 12px rgba(255,255,255,.5);
 }
 .timeline-item .year{
-  font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gray);margin-bottom:6px;display:block;
+  font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--gray);margin-bottom:6px;display:block;
 }
 .timeline-item h4{font-size:1.15rem;margin-bottom:8px;}
 .timeline-item p{color:var(--gray);font-size:.9rem;}
 
 /* ============ SERVICES ============ */
-.services-grid{
-  display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;
-}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;}
 .service-card{padding:32px;text-align:left;}
 .service-card i{font-size:2rem;margin-bottom:18px;color:var(--white);}
 .service-card h4{font-size:1.1rem;margin-bottom:10px;}
@@ -403,25 +327,17 @@ h1,h2,h3,h4{font-weight:700;letter-spacing:-0.02em;}
 .tech-carousel-wrap::after{right:0;background:linear-gradient(270deg,var(--black),transparent);}
 .tech-track{
   display:flex;gap:24px;width:max-content;
-  animation: scrollTech 30s linear infinite;
+  animation:scrollTech 30s linear infinite;
 }
 .tech-track:hover{animation-play-state:paused;}
-@keyframes scrollTech{
-  from{transform:translateX(0);}
-  to{transform:translateX(-50%);}
-}
-.tech-item{
-  display:flex;flex-direction:column;align-items:center;gap:10px;
-  padding:24px 30px;min-width:110px;
-}
+@keyframes scrollTech{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+.tech-item{display:flex;flex-direction:column;align-items:center;gap:10px;padding:24px 30px;min-width:110px;}
 .tech-item i{font-size:2.4rem;color:var(--gray);transition:var(--transition);}
 .tech-item:hover i{color:var(--white);transform:scale(1.15);}
 .tech-item span{font-size:.78rem;color:var(--gray);}
 
 /* ============ CONTACT ============ */
-.contact-grid{
-  display:grid;grid-template-columns:1fr 1.3fr;gap:40px;
-}
+.contact-grid{display:grid;grid-template-columns:1fr 1.3fr;gap:40px;}
 .contact-info{padding:36px;}
 .contact-info h4{margin-bottom:18px;font-size:1.2rem;}
 .contact-info p{color:var(--gray);font-size:.9rem;margin-bottom:24px;}
@@ -436,15 +352,15 @@ h1,h2,h3,h4{font-weight:700;letter-spacing:-0.02em;}
 .contact-form{padding:36px;display:flex;flex-direction:column;gap:18px;}
 .form-group{display:flex;flex-direction:column;gap:8px;}
 .form-group label{font-size:.8rem;color:var(--gray);text-transform:uppercase;letter-spacing:.1em;}
-.form-group input, .form-group textarea{
+.form-group input,.form-group textarea{
   background:var(--dark);border:1px solid var(--glass-border);border-radius:10px;
   padding:14px 16px;color:var(--white);font-size:.95rem;font-family:inherit;
   transition:var(--transition);resize:vertical;
 }
-.form-group input:focus, .form-group textarea:focus{
+.form-group input:focus,.form-group textarea:focus{
   outline:none;border-color:rgba(255,255,255,.4);box-shadow:0 0 0 3px rgba(255,255,255,.05);
 }
-.form-group input::placeholder, .form-group textarea::placeholder{color:#666;}
+.form-group input::placeholder,.form-group textarea::placeholder{color:#666;}
 .submit-btn{
   padding:15px;border-radius:10px;border:none;background:var(--white);color:var(--black);
   font-weight:700;font-size:.95rem;cursor:pointer;transition:var(--transition);
@@ -453,10 +369,7 @@ h1,h2,h3,h4{font-weight:700;letter-spacing:-0.02em;}
 @media(max-width:900px){.contact-grid{grid-template-columns:1fr;}}
 
 /* ============ FOOTER ============ */
-footer{
-  padding:50px 6% 30px;border-top:1px solid var(--glass-border);
-  text-align:center;
-}
+footer{padding:50px 6% 30px;border-top:1px solid var(--glass-border);text-align:center;}
 .footer-social{display:flex;justify-content:center;gap:18px;margin:24px 0;}
 .footer-social a{
   width:42px;height:42px;border-radius:50%;
@@ -476,14 +389,87 @@ footer p{color:var(--gray);font-size:.85rem;}
 .back-to-top:hover{background:var(--white);color:var(--black);box-shadow:0 0 20px rgba(255,255,255,.4);}
 
 /* ============ AOS-style animations ============ */
-[data-aos]{opacity:0;transform:translateY(40px);transition:opacity .8s ease, transform .8s ease;}
+[data-aos]{opacity:0;transform:translateY(40px);transition:opacity .8s ease,transform .8s ease;}
 [data-aos="fade-in"]{transform:translateY(0);}
 [data-aos="scale"]{transform:scale(.9);}
 [data-aos].aos-animate{opacity:1;transform:translateY(0) scale(1);}
 
+/* ============ MODAL ============ */
+.modal-overlay{
+  position:fixed;inset:0;background:rgba(0,0,0,.85);backdrop-filter:blur(10px);
+  z-index:5000;display:flex;align-items:center;justify-content:center;
+  opacity:0;visibility:hidden;transition:opacity .3s ease,visibility .3s ease;
+  padding:20px;
+}
+.modal-overlay.open{opacity:1;visibility:visible;}
+.modal-box{
+  background:#111;border:1px solid var(--glass-border);border-radius:22px;
+  width:100%;max-width:480px;padding:36px;position:relative;
+  transform:scale(.92) translateY(20px);transition:transform .35s cubic-bezier(.4,0,.2,1);
+  max-height:90vh;overflow-y:auto;
+}
+.modal-overlay.open .modal-box{transform:scale(1) translateY(0);}
+.modal-close{
+  position:absolute;top:16px;right:18px;background:none;border:none;
+  color:var(--gray);font-size:1.3rem;cursor:pointer;transition:var(--transition);
+  width:32px;height:32px;display:flex;align-items:center;justify-content:center;border-radius:50%;
+}
+.modal-close:hover{background:var(--glass-border);color:var(--white);}
+.modal-box h3{font-size:1.3rem;margin-bottom:6px;}
+.modal-box .modal-sub{color:var(--gray);font-size:.85rem;margin-bottom:28px;}
+.project-list-grid{display:flex;flex-direction:column;gap:10px;}
+.proj-item{
+  display:flex;align-items:center;gap:14px;padding:14px 18px;border-radius:12px;
+  background:var(--glass);border:1px solid var(--glass-border);
+  cursor:pointer;transition:var(--transition);
+}
+.proj-item:hover{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.2);transform:translateX(4px);}
+.proj-item-icon{
+  width:36px;height:36px;border-radius:10px;background:rgba(255,255,255,.06);
+  display:flex;align-items:center;justify-content:center;font-size:1rem;color:var(--white);flex-shrink:0;
+}
+.proj-item-info{flex:1;}
+.proj-item-info h5{font-size:.9rem;margin-bottom:2px;}
+.proj-item-info span{font-size:.75rem;color:var(--gray);}
+.proj-item-arrow{color:var(--gray);font-size:.8rem;}
+
+/* detail modal */
+.modal-detail-icon{
+  width:64px;height:64px;border-radius:16px;
+  background:rgba(255,255,255,.06);border:1px solid var(--glass-border);
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.8rem;color:var(--white);margin-bottom:20px;
+}
+.modal-detail-title{font-size:1.4rem;margin-bottom:8px;}
+.modal-detail-desc{color:var(--gray);font-size:.9rem;margin-bottom:24px;line-height:1.7;}
+.modal-status-badge{
+  display:inline-flex;align-items:center;gap:6px;
+  padding:6px 14px;border-radius:30px;font-size:.78rem;font-weight:600;
+  margin-bottom:20px;
+}
+.badge-live{background:rgba(255,255,255,.08);color:#7fff7f;border:1px solid rgba(127,255,127,.2);}
+.badge-wip{background:rgba(255,255,255,.06);color:var(--gray);border:1px solid var(--glass-border);}
+.badge-dot{width:6px;height:6px;border-radius:50%;}
+.badge-live .badge-dot{background:#7fff7f;box-shadow:0 0 6px #7fff7f;}
+.badge-wip .badge-dot{background:var(--gray);}
+.modal-action-btn{
+  display:flex;align-items:center;justify-content:center;gap:8px;
+  width:100%;padding:14px;border-radius:12px;font-size:.9rem;font-weight:700;
+  background:var(--white);color:var(--black);border:none;cursor:pointer;
+  transition:var(--transition);margin-top:8px;
+}
+.modal-action-btn:hover{box-shadow:0 0 25px rgba(255,255,255,.4);transform:translateY(-2px);}
+.modal-back-btn{
+  display:flex;align-items:center;gap:6px;background:none;border:none;
+  color:var(--gray);font-size:.82rem;cursor:pointer;margin-bottom:20px;
+  transition:var(--transition);padding:0;
+}
+.modal-back-btn:hover{color:var(--white);}
+
 @media(max-width:600px){
   section{padding:70px 5%;}
   .nav-links{width:85%;}
+  .modal-box{padding:24px;}
 }
 </style>
 </head>
@@ -564,7 +550,7 @@ footer p{color:var(--gray);font-size:.85rem;}
       </div>
       <div class="about-stats" data-aos="fade-up">
         <div class="glass-card stat-box"><h3 data-count="5">0</h3><p>Years Experience</p></div>
-        <div class="glass-card stat-box"><h3 data-count="40">0</h3><p>Projects Done</p></div>
+        <div class="glass-card stat-box clickable" id="statProjects" title="Lihat daftar proyek"><h3 data-count="8">0</h3><p>Projects Done</p></div>
         <div class="glass-card stat-box"><h3 data-count="25">0</h3><p>Happy Clients</p></div>
         <div class="glass-card stat-box"><h3 data-count="20">0</h3><p>Technologies</p></div>
       </div>
@@ -580,7 +566,6 @@ footer p{color:var(--gray);font-size:.85rem;}
       <h2>Tech Expertise</h2>
       <p>Keahlian teknis yang digunakan untuk membangun produk digital end-to-end.</p>
     </div>
-
     <div class="skills-tabs" data-aos="fade-up">
       <button class="skill-tab active" data-tab="backend">Backend</button>
       <button class="skill-tab" data-tab="frontend">Frontend</button>
@@ -637,62 +622,106 @@ footer p{color:var(--gray);font-size:.85rem;}
     <div class="projects-grid">
 
       <div class="glass-card project-card" data-aos="fade-up">
-        <div class="project-thumb"><i class="fa-brands fa-whatsapp"></i></div>
+        <div class="project-thumb"><i class="fa-brands fa-telegram"></i></div>
         <div class="project-body">
-          <h4>WhatsApp Multi Device Bot</h4>
-          <p>Bot WhatsApp multi-device dengan sistem plugin, auto-reply, dan manajemen sesi yang stabil.</p>
-          <div class="tech-tags"><span>Node.js</span><span>Baileys</span><span>SQLite</span></div>
-          <div class="project-links"><a href="#">Demo</a><a href="#">Source</a></div>
+          <h4>Script MD Telegram</h4>
+          <p>Script multi-device Telegram dengan fitur manajemen sesi, plugin modular, dan stabilitas tinggi.</p>
+          <div class="tech-tags"><span>Node.js</span><span>Telegram API</span><span>GramJS</span></div>
+          <div class="project-links">
+            <a class="btn-open" onclick="openProjectDetail('md-tele')">Buka Bot</a>
+            <a class="btn-wip" onclick="openProjectDetail('md-tele')">Detail</a>
+          </div>
         </div>
       </div>
 
       <div class="glass-card project-card" data-aos="fade-up">
         <div class="project-thumb"><i class="fa-solid fa-server"></i></div>
         <div class="project-body">
-          <h4>Hosting Panel System</h4>
-          <p>Panel manajemen hosting bot dengan kontrol resource, monitoring, dan deployment otomatis.</p>
-          <div class="tech-tags"><span>Express.js</span><span>Docker</span><span>VPS</span></div>
-          <div class="project-links"><a href="#">Demo</a><a href="#">Source</a></div>
+          <h4>Script cPanel Telegram</h4>
+          <p>Panel kontrol berbasis Telegram untuk manajemen hosting bot, resource monitoring, dan deployment.</p>
+          <div class="tech-tags"><span>Node.js</span><span>Telegram Bot</span><span>Docker</span></div>
+          <div class="project-links">
+            <a class="btn-open" onclick="openProjectDetail('cpanel-tele')">Buka Bot</a>
+            <a class="btn-wip" onclick="openProjectDetail('cpanel-tele')">Detail</a>
+          </div>
         </div>
       </div>
 
       <div class="glass-card project-card" data-aos="fade-up">
-        <div class="project-thumb"><i class="fa-solid fa-credit-card"></i></div>
+        <div class="project-thumb"><i class="fa-solid fa-user-check"></i></div>
         <div class="project-body">
-          <h4>Payment Gateway Integration</h4>
-          <p>Integrasi sistem pembayaran QRIS dengan notifikasi real-time dan verifikasi otomatis.</p>
-          <div class="tech-tags"><span>Node.js</span><span>REST API</span><span>Webhook</span></div>
-          <div class="project-links"><a href="#">Demo</a><a href="#">Source</a></div>
+          <h4>Script Cek Bio</h4>
+          <p>Tool otomatis untuk mengecek dan memverifikasi bio profil secara real-time dengan notifikasi cepat.</p>
+          <div class="tech-tags"><span>Node.js</span><span>API</span><span>Automation</span></div>
+          <div class="project-links">
+            <a class="btn-wip" onclick="openProjectDetail('cek-bio')">Detail</a>
+            <a class="btn-wip" onclick="openProjectDetail('cek-bio')">Status</a>
+          </div>
         </div>
       </div>
 
       <div class="glass-card project-card" data-aos="fade-up">
-        <div class="project-thumb"><i class="fa-solid fa-id-card"></i></div>
+        <div class="project-thumb"><i class="fa-solid fa-dice"></i></div>
         <div class="project-body">
-          <h4>Portfolio Website</h4>
-          <p>Website portofolio premium dengan desain dark elegant, animasi smooth, dan performa tinggi.</p>
-          <div class="tech-tags"><span>HTML5</span><span>CSS3</span><span>JavaScript</span></div>
-          <div class="project-links"><a href="#">Demo</a><a href="#">Source</a></div>
+          <h4>Script Gacha</h4>
+          <p>Sistem gacha interaktif dengan rate pull yang bisa dikonfigurasi, inventory, dan reward tier.</p>
+          <div class="tech-tags"><span>Node.js</span><span>SQLite</span><span>Game Logic</span></div>
+          <div class="project-links">
+            <a class="btn-wip" onclick="openProjectDetail('gacha')">Detail</a>
+            <a class="btn-wip" onclick="openProjectDetail('gacha')">Status</a>
+          </div>
         </div>
       </div>
 
       <div class="glass-card project-card" data-aos="fade-up">
-        <div class="project-thumb"><i class="fa-solid fa-diagram-project"></i></div>
+        <div class="project-thumb"><i class="fa-solid fa-wrench"></i></div>
         <div class="project-body">
-          <h4>API Service Platform</h4>
-          <p>Platform layanan API terpusat dengan autentikasi token, rate limiting, dan dokumentasi lengkap.</p>
-          <div class="tech-tags"><span>Express.js</span><span>PostgreSQL</span><span>JWT</span></div>
-          <div class="project-links"><a href="#">Demo</a><a href="#">Source</a></div>
+          <h4>Script Fix Merah</h4>
+          <p>Script perbaikan dan recovery otomatis untuk sesi bot yang error atau disconnect.</p>
+          <div class="tech-tags"><span>Node.js</span><span>Process Manager</span><span>Auto-heal</span></div>
+          <div class="project-links">
+            <a class="btn-wip" onclick="openProjectDetail('fix-merah')">Detail</a>
+            <a class="btn-wip" onclick="openProjectDetail('fix-merah')">Status</a>
+          </div>
         </div>
       </div>
 
       <div class="glass-card project-card" data-aos="fade-up">
-        <div class="project-thumb"><i class="fa-solid fa-robot"></i></div>
+        <div class="project-thumb"><i class="fa-brands fa-whatsapp"></i></div>
         <div class="project-body">
-          <h4>Automation Tools</h4>
-          <p>Kumpulan tools otomasi untuk manajemen tugas berulang, scraping data, dan notifikasi terjadwal.</p>
-          <div class="tech-tags"><span>Python</span><span>Node.js</span><span>Cron</span></div>
-          <div class="project-links"><a href="#">Demo</a><a href="#">Source</a></div>
+          <h4>Script MD WhatsApp</h4>
+          <p>Bot WhatsApp multi-device dengan sistem plugin, auto-reply, dan manajemen sesi yang stabil.</p>
+          <div class="tech-tags"><span>Node.js</span><span>Baileys</span><span>SQLite</span></div>
+          <div class="project-links">
+            <a class="btn-wip" onclick="openProjectDetail('md-wa')">Detail</a>
+            <a class="btn-wip" onclick="openProjectDetail('md-wa')">Status</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="glass-card project-card" data-aos="fade-up">
+        <div class="project-thumb"><i class="fa-solid fa-user-slash"></i></div>
+        <div class="project-body">
+          <h4>Script Ban Auto User Out Tele</h4>
+          <p>Sistem moderasi otomatis Telegram yang mendeteksi dan mengeluarkan user bermasalah secara real-time.</p>
+          <div class="tech-tags"><span>Node.js</span><span>Telegram API</span><span>Auto-mod</span></div>
+          <div class="project-links">
+            <a class="btn-wip" onclick="openProjectDetail('ban-auto')">Detail</a>
+            <a class="btn-wip" onclick="openProjectDetail('ban-auto')">Status</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="glass-card project-card" data-aos="fade-up">
+        <div class="project-thumb"><i class="fa-solid fa-mobile-screen"></i></div>
+        <div class="project-body">
+          <h4>APK Hexara Insect</h4>
+          <p>Aplikasi mobile Hexara Insect — platform digital dengan fitur lengkap untuk pengguna Android.</p>
+          <div class="tech-tags"><span>Android</span><span>APK</span><span>Mobile App</span></div>
+          <div class="project-links">
+            <a class="btn-wip" onclick="openProjectDetail('apk-hexara')">Detail</a>
+            <a class="btn-wip" onclick="openProjectDetail('apk-hexara')">Status</a>
+          </div>
         </div>
       </div>
 
@@ -710,29 +739,29 @@ footer p{color:var(--gray);font-size:.85rem;}
     </div>
     <div class="timeline">
       <div class="timeline-item" data-aos="fade-up">
-        <span class="year">2021</span>
+        <span class="year">2022</span>
         <h4>Memulai Perjalanan Coding</h4>
         <p>Belajar dasar HTML, CSS, dan JavaScript secara mandiri, membangun proyek-proyek kecil sebagai fondasi.</p>
       </div>
       <div class="timeline-item" data-aos="fade-up">
-        <span class="year">2022</span>
+        <span class="year">2023</span>
         <h4>Masuk ke Backend & Bot Development</h4>
         <p>Mulai mengembangkan bot WhatsApp dan Telegram, mempelajari Node.js, database, dan arsitektur server.</p>
       </div>
       <div class="timeline-item" data-aos="fade-up">
-        <span class="year">2023</span>
+        <span class="year">2024</span>
         <h4>Manajemen VPS & Deployment</h4>
         <p>Menguasai pengelolaan VPS, konfigurasi Nginx, Docker, dan deployment aplikasi produksi.</p>
       </div>
       <div class="timeline-item" data-aos="fade-up">
-        <span class="year">2024</span>
+        <span class="year">2025</span>
         <h4>Proyek Skala Menengah & Integrasi API</h4>
         <p>Mengerjakan proyek payment gateway, sistem panel hosting, dan integrasi API pihak ketiga.</p>
       </div>
       <div class="timeline-item" data-aos="fade-up">
-        <span class="year">2025 - Sekarang</span>
+        <span class="year">Feb 2025 - Sekarang</span>
         <h4>Full Stack Developer Profesional</h4>
-        <p>Fokus membangun produk digital end-to-end: web app, sistem otomasi, dan infrastruktur skalabel.</p>
+        <p>Fokus membangun produk digital end-to-end: web app, sistem otomasi, skrip Telegram & WhatsApp, dan infrastruktur skalabel.</p>
       </div>
     </div>
   </div>
@@ -780,6 +809,7 @@ footer p{color:var(--gray);font-size:.85rem;}
       <div class="tech-item"><i class="fa-brands fa-docker"></i><span>Docker</span></div>
       <div class="tech-item"><i class="fa-solid fa-globe"></i><span>Nginx</span></div>
       <div class="tech-item"><i class="fa-brands fa-node-js"></i><span>Node.js</span></div>
+      <div class="tech-item"><i class="fa-brands fa-telegram"></i><span>Telegram</span></div>
       <!-- duplicate for seamless loop -->
       <div class="tech-item"><i class="fa-brands fa-html5"></i><span>HTML5</span></div>
       <div class="tech-item"><i class="fa-brands fa-css3-alt"></i><span>CSS3</span></div>
@@ -794,6 +824,7 @@ footer p{color:var(--gray);font-size:.85rem;}
       <div class="tech-item"><i class="fa-brands fa-docker"></i><span>Docker</span></div>
       <div class="tech-item"><i class="fa-solid fa-globe"></i><span>Nginx</span></div>
       <div class="tech-item"><i class="fa-brands fa-node-js"></i><span>Node.js</span></div>
+      <div class="tech-item"><i class="fa-brands fa-telegram"></i><span>Telegram</span></div>
     </div>
   </div>
 </section>
@@ -851,7 +882,209 @@ footer p{color:var(--gray);font-size:.85rem;}
 
 <div class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></div>
 
+<!-- ====== MODAL: PROJECT LIST ====== -->
+<div class="modal-overlay" id="modalProjectList">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal('modalProjectList')"><i class="fa-solid fa-xmark"></i></button>
+    <h3>All Projects</h3>
+    <p class="modal-sub">8 proyek yang telah dikerjakan — klik untuk detail.</p>
+    <div class="project-list-grid">
+      <div class="proj-item" onclick="openProjectDetail('cek-bio')">
+        <div class="proj-item-icon"><i class="fa-solid fa-user-check"></i></div>
+        <div class="proj-item-info"><h5>Script Cek Bio</h5><span>Automation Tool</span></div>
+        <i class="fa-solid fa-chevron-right proj-item-arrow"></i>
+      </div>
+      <div class="proj-item" onclick="openProjectDetail('gacha')">
+        <div class="proj-item-icon"><i class="fa-solid fa-dice"></i></div>
+        <div class="proj-item-info"><h5>Script Gacha</h5><span>Game System</span></div>
+        <i class="fa-solid fa-chevron-right proj-item-arrow"></i>
+      </div>
+      <div class="proj-item" onclick="openProjectDetail('fix-merah')">
+        <div class="proj-item-icon"><i class="fa-solid fa-wrench"></i></div>
+        <div class="proj-item-info"><h5>Script Fix Merah</h5><span>Auto Recovery</span></div>
+        <i class="fa-solid fa-chevron-right proj-item-arrow"></i>
+      </div>
+      <div class="proj-item" onclick="openProjectDetail('md-wa')">
+        <div class="proj-item-icon"><i class="fa-brands fa-whatsapp"></i></div>
+        <div class="proj-item-info"><h5>Script MD WhatsApp</h5><span>Bot Development</span></div>
+        <i class="fa-solid fa-chevron-right proj-item-arrow"></i>
+      </div>
+      <div class="proj-item" onclick="openProjectDetail('md-tele')">
+        <div class="proj-item-icon"><i class="fa-brands fa-telegram"></i></div>
+        <div class="proj-item-info"><h5>Script MD Telegram</h5><span>Bot Development · Live</span></div>
+        <i class="fa-solid fa-chevron-right proj-item-arrow"></i>
+      </div>
+      <div class="proj-item" onclick="openProjectDetail('cpanel-tele')">
+        <div class="proj-item-icon"><i class="fa-solid fa-server"></i></div>
+        <div class="proj-item-info"><h5>Script cPanel Telegram</h5><span>Panel System · Live</span></div>
+        <i class="fa-solid fa-chevron-right proj-item-arrow"></i>
+      </div>
+      <div class="proj-item" onclick="openProjectDetail('ban-auto')">
+        <div class="proj-item-icon"><i class="fa-solid fa-user-slash"></i></div>
+        <div class="proj-item-info"><h5>Script Ban Auto User Out</h5><span>Auto Moderation</span></div>
+        <i class="fa-solid fa-chevron-right proj-item-arrow"></i>
+      </div>
+      <div class="proj-item" onclick="openProjectDetail('apk-hexara')">
+        <div class="proj-item-icon"><i class="fa-solid fa-mobile-screen"></i></div>
+        <div class="proj-item-info"><h5>APK Hexara Insect</h5><span>Mobile App</span></div>
+        <i class="fa-solid fa-chevron-right proj-item-arrow"></i>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ====== MODAL: PROJECT DETAIL ====== -->
+<div class="modal-overlay" id="modalProjectDetail">
+  <div class="modal-box" id="modalDetailContent">
+    <!-- injected by JS -->
+  </div>
+</div>
+
 <script>
+/* ============ PROJECT DATA ============ */
+const projects = {
+  'cek-bio': {
+    icon: 'fa-solid fa-user-check',
+    title: 'Script Cek Bio',
+    desc: 'Tool otomatis untuk mengecek dan memverifikasi bio profil secara real-time. Mendukung notifikasi instan saat ada perubahan dan integrasi API pihak ketiga.',
+    tags: ['Node.js', 'API', 'Automation'],
+    live: false,
+    link: null
+  },
+  'gacha': {
+    icon: 'fa-solid fa-dice',
+    title: 'Script Gacha',
+    desc: 'Sistem gacha interaktif dengan rate pull yang dapat dikonfigurasi, sistem inventory, reward tier, dan log history pull per user.',
+    tags: ['Node.js', 'SQLite', 'Game Logic'],
+    live: false,
+    link: null
+  },
+  'fix-merah': {
+    icon: 'fa-solid fa-wrench',
+    title: 'Script Fix Merah',
+    desc: 'Script perbaikan dan recovery otomatis untuk sesi bot yang error atau disconnect. Mendeteksi kondisi merah dan melakukan restart terkelola tanpa downtime panjang.',
+    tags: ['Node.js', 'Process Manager', 'Auto-heal'],
+    live: false,
+    link: null
+  },
+  'md-wa': {
+    icon: 'fa-brands fa-whatsapp',
+    title: 'Script MD WhatsApp',
+    desc: 'Bot WhatsApp multi-device dengan sistem plugin modular, auto-reply cerdas, dan manajemen sesi yang stabil menggunakan library Baileys.',
+    tags: ['Node.js', 'Baileys', 'SQLite'],
+    live: false,
+    link: null
+  },
+  'md-tele': {
+    icon: 'fa-brands fa-telegram',
+    title: 'Script MD Telegram',
+    desc: 'Script multi-device Telegram dengan fitur manajemen sesi lengkap, plugin modular, stabilitas tinggi, dan antarmuka user-friendly. Bisa langsung dicoba via bot.',
+    tags: ['Node.js', 'Telegram API', 'GramJS'],
+    live: true,
+    link: 'https://t.me/angkasamdbot',
+    linkLabel: 'Buka @angkasamdbot'
+  },
+  'cpanel-tele': {
+    icon: 'fa-solid fa-server',
+    title: 'Script cPanel Telegram',
+    desc: 'Panel kontrol berbasis Telegram untuk manajemen hosting bot. Fitur: resource monitoring, deployment otomatis, restart bot, dan kontrol penuh via chat Telegram.',
+    tags: ['Node.js', 'Telegram Bot', 'Docker'],
+    live: true,
+    link: 'https://t.me/cpanelprivkasabot',
+    linkLabel: 'Buka @cpanelprivkasabot'
+  },
+  'ban-auto': {
+    icon: 'fa-solid fa-user-slash',
+    title: 'Script Ban Auto User Out Telegram',
+    desc: 'Sistem moderasi otomatis Telegram yang mendeteksi aktivitas mencurigakan dan mengeluarkan user bermasalah secara real-time tanpa intervensi manual.',
+    tags: ['Node.js', 'Telegram API', 'Auto-mod'],
+    live: false,
+    link: null
+  },
+  'apk-hexara': {
+    icon: 'fa-solid fa-mobile-screen',
+    title: 'APK Hexara Insect',
+    desc: 'Aplikasi mobile Hexara Insect untuk platform Android. Menghadirkan fitur-fitur lengkap dalam tampilan yang ringan dan mudah digunakan.',
+    tags: ['Android', 'APK', 'Mobile App'],
+    live: false,
+    link: null
+  }
+};
+
+/* ============ MODAL FUNCTIONS ============ */
+function openModal(id){
+  document.getElementById(id).classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeModal(id){
+  document.getElementById(id).classList.remove('open');
+  document.body.style.overflow = 'auto';
+}
+
+function openProjectDetail(key){
+  const p = projects[key];
+  if(!p) return;
+
+  const isFromList = document.getElementById('modalProjectList').classList.contains('open');
+
+  const tagsHtml = p.tags.map(t=>`<span>${t}</span>`).join('');
+  const statusBadge = p.live
+    ? `<div class="modal-status-badge badge-live"><span class="badge-dot"></span> Live</div>`
+    : `<div class="modal-status-badge badge-wip"><span class="badge-dot"></span> Sedang dalam pengembangan & perbaikan</div>`;
+
+  const actionBtn = p.live && p.link
+    ? `<a href="${p.link}" target="_blank" class="modal-action-btn"><i class="fa-solid fa-arrow-up-right-from-square"></i> ${p.linkLabel}</a>`
+    : `<button class="modal-action-btn" style="opacity:.5;cursor:not-allowed;" disabled><i class="fa-solid fa-clock"></i> Belum tersedia</button>`;
+
+  const backBtn = isFromList
+    ? `<button class="modal-back-btn" onclick="goBackToList()"><i class="fa-solid fa-arrow-left"></i> Kembali ke semua proyek</button>`
+    : '';
+
+  document.getElementById('modalDetailContent').innerHTML = `
+    <button class="modal-close" onclick="closeAllModals()"><i class="fa-solid fa-xmark"></i></button>
+    ${backBtn}
+    <div class="modal-detail-icon"><i class="${p.icon}"></i></div>
+    ${statusBadge}
+    <h3 class="modal-detail-title">${p.title}</h3>
+    <p class="modal-detail-desc">${p.desc}</p>
+    <div class="tech-tags" style="margin-bottom:24px;">${tagsHtml}</div>
+    ${actionBtn}
+  `;
+
+  if(isFromList){
+    document.getElementById('modalProjectList').classList.remove('open');
+  }
+  openModal('modalProjectDetail');
+}
+
+function goBackToList(){
+  closeModal('modalProjectDetail');
+  openModal('modalProjectList');
+}
+
+function closeAllModals(){
+  closeModal('modalProjectList');
+  closeModal('modalProjectDetail');
+}
+
+/* click on Projects Done stat */
+document.getElementById('statProjects').addEventListener('click', ()=>{
+  openModal('modalProjectList');
+});
+
+/* close on overlay click */
+document.getElementById('modalProjectList').addEventListener('click', function(e){
+  if(e.target === this) closeModal('modalProjectList');
+});
+document.getElementById('modalProjectDetail').addEventListener('click', function(e){
+  if(e.target === this) closeAllModals();
+});
+
+/* ESC key */
+document.addEventListener('keydown', e=>{
+  if(e.key === 'Escape') closeAllModals();
+});
+
 /* ============ LOADING SCREEN ============ */
 window.addEventListener('load', () => {
   setTimeout(() => {
@@ -890,7 +1123,7 @@ document.body.style.overflow = 'hidden';
   animate();
 })();
 
-/* ============ HERO CANVAS - FUTURISTIC BG ============ */
+/* ============ HERO CANVAS ============ */
 (function(){
   const canvas = document.getElementById('heroCanvas');
   const ctx = canvas.getContext('2d');
@@ -949,7 +1182,7 @@ document.body.style.overflow = 'hidden';
     requestAnimationFrame(loop);
   }
   loop();
-  document.querySelectorAll('a, button, .skill-tab, .glass-card').forEach(el=>{
+  document.querySelectorAll('a, button, .skill-tab, .glass-card, .proj-item').forEach(el=>{
     el.addEventListener('mouseenter', ()=> ring.style.transform='translate(-50%,-50%) scale(1.6)');
     el.addEventListener('mouseleave', ()=> ring.style.transform='translate(-50%,-50%) scale(1)');
   });
@@ -981,7 +1214,7 @@ document.querySelectorAll('.skill-tab').forEach(tab=>{
   });
 });
 
-/* ============ SCROLL ANIMATIONS (AOS-like) ============ */
+/* ============ SCROLL ANIMATIONS ============ */
 const observer = new IntersectionObserver((entries)=>{
   entries.forEach(entry=>{
     if(entry.isIntersecting){
@@ -1003,7 +1236,6 @@ function animateBars(container){
     bar.style.width = w+'%';
   });
 }
-/* Initial active backend bars */
 window.addEventListener('load', ()=> animateBars(document.getElementById('backend')));
 
 /* ============ COUNTER ANIMATION ============ */
@@ -1017,7 +1249,7 @@ function animateCounters(container){
     const interval = setInterval(()=>{
       cur += step;
       if(cur >= target){cur = target; clearInterval(interval);}
-      el.textContent = cur + (target >= 20 ? '+' : '');
+      el.textContent = cur + '+';
     },35);
   });
 }
